@@ -8,7 +8,7 @@ const StartServer = async() => {
 
     const app = express();
     const numCPU = OS.cpus().length;
-    
+    console.log(process.env);
     await expressApp(app);
 
     if (cluster.isMaster) {

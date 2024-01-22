@@ -12,7 +12,7 @@ module.exports = (app) => {
     }
   });
 
-  app.put("/kapal/post", async (req, res, next) => {
+  app.post("/kapal/post", async (req, res, next) => {
     try {
       if (req.headers['accept'] == 'application/xml' && req.headers['content-type'] == 'application/xml') {
         const dataBody = req.body;

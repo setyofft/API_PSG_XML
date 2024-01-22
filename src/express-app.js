@@ -26,6 +26,6 @@ module.exports = async (app) => {
     kapal(app);
 
     // error handling
-    app.use(HandleErrors);
+    // app.use(HandleErrors);
     
 }
