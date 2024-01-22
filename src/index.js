@@ -8,6 +8,7 @@ const StartServer = async() => {
 
     const app = express();
     const numCPU = OS.cpus().length;
+    const PORTs = 3001;
     
     await expressApp(app);
 
@@ -16,8 +17,8 @@ const StartServer = async() => {
             cluster.fork()
         }
     } else {
-        app.listen(PORT, async () => {
-            console.log(`listening on port ${PORT} and worker ${process.pid}`);
+        app.listen(PORTs, async () => {
+            console.log(`listening on port ${PORTs} and worker ${process.pid}`);
         }).on('error', (err) => {
             console.log(err);
             process.exit();

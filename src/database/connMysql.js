@@ -1,17 +1,17 @@
 const {Sequelize} = require('sequelize');
 
 const db = new Sequelize(
-    process.env.DBNAME, 
-    process.env.DBUSER, 
-    process.env.DBPASSWORD,{
-        host: process.env.DBHOST,
-        dialect: process.env.DBDIALECT,
+    'PSGDB', 
+    'panda', 
+    '5e7Y0..==??',{
+        host: '127.0.0.1',
+        dialect: 'mysql',
         dialectOptions: {
             dateStrings: true,
             typeCast: true
         },
         timezone: "+07:00",
-        logging: process.env.NODE_ENV === 'production' ? false : console.log
+        logging: process.env.NODE_ENV === 'prod' ? false : console.log
     }
 );
 

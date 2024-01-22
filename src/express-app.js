@@ -23,7 +23,7 @@ module.exports = async (app) => {
     }));
 
     //api
-    kapal(app);
+    kapal(app); 
 
     // error handling
     app.use(HandleErrors);
