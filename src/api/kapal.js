@@ -116,7 +116,7 @@ module.exports = (app) => {
   }
 
   //POST RAW RPM
-  app.get("/kapal/v1/post", async (req, res, next) => {
+  app.post("/kapal/v1/post", async (req, res, next) => {
     var msgxmlRes = null
     var idxmlRes = null
     var stsxmlRes = null
